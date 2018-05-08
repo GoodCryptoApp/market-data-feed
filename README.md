@@ -69,8 +69,10 @@ QUNX: Quoinex
 
 GDAX: Global Digital Asset Exchange
 
-JavaScript Example
-```
+
+
+## JavaScript Example
+``` html
 <!DOCTYPE html>
 <head>
   <title>Pusher Test</title>
@@ -98,12 +100,16 @@ JavaScript Example
 </head>
 ```
 
-React Native Example
+## React Native Example
 
 Install PusherJS via NPM:
-npm install pusher-js
-import Pusher from 'pusher-js/react-native';
 ```
+npm install pusher-js
+```
+
+``` javascript
+import Pusher from 'pusher-js/react-native';
+
 // Enable pusher logging - don't include this in production
 Pusher.logToConsole = true;
  
