@@ -8,10 +8,10 @@ CRYPTTO is developing a quantitative crypto trading platform, providing users ac
 
 If you have any questions or suggestions regarding our data feed, please, join our Telegram chat at https://t.me/cryptto_chat
 
-CRYPTTO uses Pusher for real time websocket streaming. Please refer to the Pusher documentation and libraries to connect to our websocket stream. You can also find an example below.
+CRYPTTO uses Pusher (https://pusher.com) for real time websocket streaming. Please refer to the Pusher documentation (https://pusher.com/docs/client_api_guide) and libraries to connect to our websocket stream. You can also find an example below.
 
 
-Receiving Real-time Data
+RECEIVING REAL-TIME DATA
 
 What Is WebSocket?
 
@@ -20,23 +20,33 @@ WebSocket is a computer communications protocol, providing full-duplex communica
 Pusher Keys and Channels
 
 Channel: private-cryptto-trades
+
 Pusher Key: 35ef78a63946cd79fdc8
+
 Authenticating endpoint: https://cryptto.io/user/api/auth
+
 
 Authentication
 
-We use Pusher user authentication process. For more information please refer to the Pusher "authenticating users" docs section. Our authenticating endpoint expects a valid "auth_key" properties item. To request your personal auth key, please, register on our website and click ”Request API access” in your personal profile.
+We use Pusher user authentication process. For more information please refer to the Pusher "authenticating users" docs section (https://pusher.com/docs/authenticating_users). Our authenticating endpoint expects a valid "auth_key" properties item. To request your personal auth key, please, register on our website and click ”Request API access” in your personal profile.
 
 
 Data Format
 
 We stream data as json array objects.
+
 [1525350863972,"GDAX","BTCUSD","A","9230.1","0.375"]
+
 Index 0: Milliseconds timestamp (1525350863972)
+
 Index 1: Exchange code ("GDAX")
+
 Index 2: Pair ("BTCUSD")
+
 Index 3: Trade side 'A' for asks, 'B' for bids ("A")
+
 Index 4: Price ("9230.1")
+
 Index 5: Trade size ("0.375")
 
 Crypto Exchanges Codes
@@ -44,15 +54,23 @@ Crypto Exchanges Codes
 OKEX: OKEX
 
 BINA: Binance
+
 BMEX: BitMEX
+
 GMNI: Gemini
+
 PLNX: Poloniex
+
 BITS: Bitstamp
+
 BITF: Bitfinex
+
 QUNX: Quoinex
+
 GDAX: Global Digital Asset Exchange
 
 JavaScript Example
+```
 <!DOCTYPE html>
 <head>
   <title>Pusher Test</title>
@@ -78,13 +96,14 @@ JavaScript Example
  
   </script>
 </head>
+```
 
 React Native Example
 
 Install PusherJS via NPM:
 npm install pusher-js
 import Pusher from 'pusher-js/react-native';
- 
+```
 // Enable pusher logging - don't include this in production
 Pusher.logToConsole = true;
  
@@ -101,6 +120,6 @@ var channel = pusher.subscribe('private-cryptto-trades');
 channel.bind('my-event', function(data) {
   alert(data.message);
 });
- 
+```
  
 
