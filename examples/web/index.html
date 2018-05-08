@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CRYPTTO Real-time Market Data Feed</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<script src="lib/pusher.js"></script>
+	<script src="lib/vue.js"></script>
+</head>
+<body>
+<div id="app">
+
+	<h1>CRYPTTO Real-time Market Data Feed</h1>
+	<form v-on:submit="connectAPI" @submit.prevent="1">
+		<input name="apikey" type="password" class="input" placeholder="Type your API-Key" v-model="apikey" autofocus required>
+		<button type="submit" class="btn" v-on:click="connectAPI" :disabled="!apikey || connected">Connect</button>
+		<button type="button" class="btn" v-on:click="disconnectAPI" :disabled="!connected">Disconnect</button>
+	</form>
+
+	<div class="alert" v-if="subscription_status">Subscription error: {{subscription_status}}.</div>
+
+	<table>
+	<thead>
+		<tr align="left">
+			<th width="21%">Timestamp</th>
+			<th width="15%" class="filter"><select v-model="exchangeFilter">
+				<option value="">All Exchanges</option>
+				<!--
+				<option value="OKEX">OKEX</option>
+				<option value="BINA">Binance</option>
+				<option value="BMEX">BitMEX</option> -->
+				<option value="BITF">Bitfinex</option>
+				<option value="BITS">Bitstamp</option>
+				<option value="GDAX">GDAX</option>
+				<option value="GMNI">Gemini</option>
+				<option value="PLNX">Poloniex</option>
+				<option value="QUNX">Quoinex</option>
+			</select></th>
+			<th width="16%" class="filter"><select v-model="symbolFilter">
+				<option value="">All Pairs</option>
+				<option value="BTCUSD">BTCUSD</option>
+				<option value="USDTBTC">USDTBTC</option>
+				<option value="ETHUSD">ETHUSD</option>
+				<option value="ETHBTC">ETHBTC</option>
+			</th>
+			<th width="17%" align="right">Price</th>
+			<th width="17%" align="right">Size</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr v-for="trade in trades">
+			<td>{{ trade[0] | timestamp }}</td>
+			<td>{{ trade[1] }}</td>
+			<td>{{ trade[2] }}</td>
+			<td v-bind:class="{green:trade[3]=='A', red:trade[3]=='B',}" align="right">{{ +trade[4] }}</td>
+			<td v-bind:class="{green:trade[3]=='A', red:trade[3]=='B',}" align="right">{{ +trade[5] }}</td>
+		</tr>
+	</tbody>
+	</table>
+
+</div>
+</body>
+
+<script src="demo.js"></script>
+
+</html>

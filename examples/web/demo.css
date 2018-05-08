@@ -1,0 +1,52 @@
+body {
+	background: white;
+	font-family: Open Sans, Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	margin: 20px 15%;
+}
+
+.alert {
+	background: #ffc489;
+	padding: 2ex 3ex;
+	margin: 2ex 0;
+}
+
+.input,
+.btn {
+	height: 34px;
+	font-size: 14px;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+.input {
+	width: 250px;
+}
+.btn {}
+
+.red {
+	background: #fff6f6;
+	color: #c00;
+}
+.green {
+	/*background: #8d8;*/
+	color: #13c81a;
+}
+
+
+th.filter {
+	padding-right: 2ex;
+}
+.filter select {
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	font-size: 15px;
+	padding: 0.5ex 0.5ex;
+	box-sizing: border-box;
+}
+
+table {
+	margin: 2ex 0;
+	width: 100%;
+	border-collapse: collapse;
+}
