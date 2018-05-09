@@ -109,6 +109,6 @@ channel.bind('trade', function(data) {
 });
 ```
 
-Working online example of data feed and feed viewer written in JavaScript can be found [here](https://cryptto-io.github.io/market-data-feed/feed-viewer). Source code for the example is [here](https://github.com/cryptto-io/market-data-feed/tree/master/feed-viewer)
+Working online example of data feed and feed viewer written in JavaScript can be found [here](https://cryptto-io.github.io/market-data-feed/feed-viewer). Source code for the example is [here](https://github.com/cryptto-io/market-data-feed/tree/master/feed-viewer).
  
 
