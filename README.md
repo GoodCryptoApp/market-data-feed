@@ -1,6 +1,6 @@
 # CRYPTTO Real-time Market Data Feed
 
-Our consolidated feed provides real time normalized trade data from major crypto exchanges **for free**. We do not aggregate or conflate trade data in any way, only normalize the protocols and publish the data to subscribers. At the moment we provide access to real time trade information for all pairs listed on GDAX, Gemini, Bitstamp, Bitfinex, Poloniex, and Quoinex. Bitmex, OKEX, and Binance to be added soon with others to follow.
+Our consolidated feed provides real time normalized trade data from major crypto exchanges **for free**. We do not aggregate or conflate trade data in any way, only normalize the protocols and publish the data to subscribers. At the moment we provide access to real time trade information for all pairs listed on Bitstamp, Bitfinex, Poloniex, and Quoinex. Bitmex, OKEX, and Binance to be added soon with others to follow.
 
 We are making the market data feed available via our C++ based low-latency market data handler capable of processing connections to all crypto exchanges on the single commodity server.
 
