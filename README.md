@@ -1,12 +1,18 @@
 # CRYPTTO Real-time Market Data Feed
 
-Our consolidated feed provides real time normalized trade data from major crypto exchanges **for free**. We do not aggregate or conflate trade data in any way, only normalize the protocols and publish the data to subscribers. At the moment we provide access to real time trade information for all pairs listed on GDAX, Gemini, Bitstamp, Bitfinex, Poloniex, and Quoinex. Bitmex, OKEX, and Binance to be added soon with others to follow.
+Our consolidated feed provides real time normalized trade data from major crypto exchanges **for free**. We do not aggregate or conflate trade data in any way, only normalize the protocols and publish the data to subscribers. At the moment we provide access to real time trade information for all pairs listed on Bitstamp, Bitfinex, Poloniex, Quoinex, GDAX, and Gemini. Bitmex, OKEX, and Binance to be added soon with others to follow.
+
+We are making the market data feed available via our C++ based low-latency market data handler capable of processing connections to all crypto exchanges on the single commodity server.
 
 CRYPTTO is developing a quantitative crypto trading platform, providing users access to fully automated trading strategies and low-latency intelligent execution across major exchanges. To find out more, please, visit our website at https://cryptto.io.
 
 If you have any questions or suggestions regarding our data feed, please, join our Telegram chat at https://t.me/cryptto_chat
 
 CRYPTTO uses [Pusher](https://pusher.com) for real time websocket streaming. Please refer to the [Pusher documentation](https://pusher.com/docs/client_api_guide) and libraries to connect to our websocket stream. You can also find an example below.
+
+### Example
+
+Working online example of data feed and feed viewer written in JavaScript can be found [here](https://cryptto-io.github.io/market-data-feed/feed-viewer). Source code for the example is [here](https://github.com/cryptto-io/market-data-feed/tree/master/feed-viewer).
 
 
 
@@ -106,6 +112,7 @@ channel.bind('trade', function(data) {
 	console.log(data);
 });
 ```
+
 
  
 
