@@ -1,11 +1,11 @@
 
-var trades = [];
 var pusher;
 var channel;
 var connected = false;
+var trades = [];
 
 var CHANNEL_TRADES = 'private-cryptto-trades';
-var MAX_LINES = 30
+var MAX_LINES = 30;
 
 var app = new Vue({
 	el: '#app',
@@ -13,13 +13,14 @@ var app = new Vue({
 		trades: trades,
 		connected: false,
 		subscription_status: null,
-		exchangeFilter: "",
-		symbolFilter: "",
+		exchangeFilter: '',
+		symbolFilter: '',
 		apikey: '',
 	},
 	methods: {
 		connectAPI: function() {
 			if (pusher) return;
+
 			pusher = new Pusher('35ef78a63946cd79fdc8', {
 				wsHost: 'ws.pusherapp.com',
 				httpHost: 'sockjs.pusher.com',
@@ -30,6 +31,7 @@ var app = new Vue({
 			this.trades.length = 0;
 			this.connected = true;
 			this.subscription_status = null;
+
 			channel = pusher.subscribe(CHANNEL_TRADES);
 			channel.bind('trade', tradeMessageHandler.bind(this));
 			channel.bind('pusher:subscription_error', function(status){
@@ -56,9 +58,12 @@ var app = new Vue({
 })
 
 function tradeMessageHandler(data) {
-	// console.log(data[1], this.exchangeFilter);
+	data.forEach(processTrade.bind(this))
+	trades.splice(MAX_LINES);
+}
+
+function processTrade(data) {
 	if ((!this.exchangeFilter || this.exchangeFilter==data[1]) &&
 		(!this.symbolFilter || this.symbolFilter==data[2]))
 		trades.splice(0, 0, data);
-	trades.splice(MAX_LINES, MAX_LINES);
 }
