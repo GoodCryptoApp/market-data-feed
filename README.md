@@ -4,7 +4,7 @@ Our consolidated feed provides real time normalized trade data from major crypto
 
 We are making the market data feed available via our C++ based low-latency market data handler capable of processing connections to all crypto exchanges on the single commodity server.
 
-CRYPTTO is developing a quantitative crypto trading platform, providing users access to fully automated trading strategies and low-latency intelligent execution across major exchanges. To find out more, please, visit our website at https://cryptto.io.
+CRYPTTO is developing a quantitative crypto trading platform, providing users access to market-neutral fully-automated trading strategies and low-latency intelligent execution algorithms across major exchanges. To find out more, please, visit our website at https://cryptto.io.
 
 If you have any questions or suggestions regarding our data feed, please, join our Telegram chat at https://t.me/cryptto_chat
 
