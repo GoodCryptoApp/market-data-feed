@@ -2,7 +2,7 @@
 
 Our consolidated feed provides real time normalized trade data from major crypto exchanges **for free**. We do not aggregate or conflate trade data in any way, only normalize the protocols and publish the trade data to subscribers. At the moment we provide access to real time trade information for all pairs listed on Bitstamp, Bitfinex, Poloniex, Quoinex, GDAX, and Gemini. Bitmex, OKEX, and Binance to be added soon with others to follow.
 
-We are making the market data feed available via our C++ based low-latency market data handler capable of processing connections to all crypto exchanges on a single commodity server.
+We are making the market data feed available via our C++ based low-latency market data handler capable of maintaining connections to all crypto exchanges on a single commodity server.
 
 CRYPTTO is developing a quantitative crypto trading platform, providing users access to market-neutral fully-automated trading strategies and low-latency intelligent execution algorithms across major exchanges. To find out more, please, visit our website at https://cryptto.io.
 
