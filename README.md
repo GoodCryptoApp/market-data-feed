@@ -10,6 +10,9 @@ If you have any questions or suggestions regarding our data feed, please, join o
 
 CRYPTTO uses [Pusher](https://pusher.com) for real time websocket streaming. Please refer to the [Pusher documentation](https://pusher.com/docs/client_api_guide) and libraries to connect to our websocket stream. You can also find an example below.
 
+![Cryptto Market Data Feed Flowchart](https://www.dropbox.com/s/pxpuikr3lz4y3yg/CrypttoDataFeed.png?dl=0)
+
+
 ### Example
 
 Working online example of data feed and feed viewer written in JavaScript can be found [here](https://cryptto-io.github.io/market-data-feed/feed-viewer). Source code for the example is [here](https://github.com/cryptto-io/market-data-feed/tree/master/feed-viewer).
