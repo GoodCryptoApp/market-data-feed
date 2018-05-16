@@ -37,8 +37,8 @@ We use Pusher user authentication process. For more information please refer to 
 We stream data as json array objects.
 ```JSON
 [
-[1525350863972,"GDAX","BTCUSD","A",9230.1,0.375],
-[1525350863975,"BITF","BTCUSD","B",9230.5,0.5]
+  [1525350863972,"GDAX","BTCUSD","A",9230.1,0.375],
+  [1525350863975,"BITF","BTCUSD","B",9230.5,0.5]
 ]
 ```
 * Index 0: Milliseconds timestamp (1525350863972)
