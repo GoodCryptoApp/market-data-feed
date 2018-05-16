@@ -36,14 +36,17 @@ We use Pusher user authentication process. For more information please refer to 
 
 We stream data as json array objects.
 ```JSON
-[1525350863972,"GDAX","BTCUSD","A","9230.1","0.375"]
+[
+[1525350863972,"GDAX","BTCUSD","A",9230.1,0.375],
+[1525350863975,"BITF","BTCUSD","B",9230.5,0.5]
+]
 ```
 * Index 0: Milliseconds timestamp (1525350863972)
 * Index 1: Exchange code ("GDAX")
 * Index 2: Pair ("BTCUSD")
-* Index 3: Trade side 'A' for asks, 'B' for bids ("A")
-* Index 4: Price ("9230.1")
-* Index 5: Trade size ("0.375")
+* Index 3: Trade side "A" for asks, "B" for bids ("A")
+* Index 4: Price (9230.1)
+* Index 5: Trade size (0.375)
 
 #### Crypto Exchanges Codes
 
